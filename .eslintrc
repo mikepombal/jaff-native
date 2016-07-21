@@ -1,17 +1,80 @@
 {
-  "parser": "babel-eslint",
-  "extends": "airbnb",
-  "globals": {
-    "__DEV__": true
-  },
-  "env": {
-    "browser": true,
-    "node": true
-  },
-  "rules": {
-    "comma-dangle": 0,
-    "spaced-comment": 0,
-    "new-cap": [2, { "capIsNewExceptions": ["Map"] }]
-  },
-  "plugins": ["react"]
+    "parser": "babel-eslint",
+
+    "extends": [
+        "eslint:recommended",
+        "plugin:react/recommended"
+    ],
+
+    "parserOptions": {
+        "ecmaFeatures": {
+            "experimentalObjectRestSpread": true,
+            "jsx": true,
+            "modules": true
+        },
+        "ecmaVersion": 7,
+        "sourceType": "module"
+    },
+
+    "plugins": [ "react" ],
+
+    "ecmaFeatures": {
+        "jsx": true
+    },
+
+    "env": {
+        "browser": true,
+        "node": true
+    },
+
+    "globals": {
+        "__DEV__": true
+    },
+
+    "rules": {
+        "array-bracket-spacing": 0,
+        "camelcase": 2,
+        "computed-property-spacing": [ 2, "never" ],
+        "curly": 2,
+        "dot-notation": 0,
+        "eol-last": 2,
+        "eqeqeq": [ 2, "allow-null" ],
+        "indent": [ 2, "tab", { "SwitchCase": 1 } ],
+        "jsx-quotes": 2,
+        "keyword-spacing": 2,
+        "max-len": [ 2, 120, 4 ],
+        "new-cap": [ 2, { "capIsNew": false } ],
+        "no-console": [ 2, { allow: [ "error" ] } ],
+        "no-dupe-keys": 2,
+        "no-mixed-spaces-and-tabs": 2,
+        "no-multiple-empty-lines": [ 2, { "max": 2 } ],
+        "no-trailing-spaces": 2,
+        "no-use-before-define": [ 2, "nofunc" ],
+        "no-undef": 2,
+        "no-underscore-dangle": 0,
+        "no-unused-vars": 2,
+        "no-var": 2,
+        "no-warning-comments": [1, { "terms": [ "todo", "fixme" ], "location": "anywhere" }],
+        "object-curly-spacing": [ 2, "always" ],
+        "quotes": [ 2, "single" ],
+        "semi": [ 2, "always" ],
+        "space-before-blocks": [ 2, "always" ],
+        "space-before-function-paren": [ 2, {"anonymous": "always", "named": "never"} ],
+        "strict": 0,
+        "vars-on-top": 2,
+
+        "react/display-name": 0,
+        "react/jsx-boolean-value": 2,
+        "react/jsx-equals-spacing": 2,
+        "react/jsx-key": 2,
+        "react/jsx-no-target-blank": 2,
+        "react/jsx-pascal-case": [2, { allowAllCaps: true }],
+        "react/jsx-space-before-closing": 2,
+        "react/no-string-refs": 2,
+        "react/prefer-stateless-function": 2,
+        "react/require-render-return": 2,
+        "react/self-closing-comp": 2,
+        "react/sort-prop-types": 2,
+        "react/wrap-multilines": 2
+    }
 }
